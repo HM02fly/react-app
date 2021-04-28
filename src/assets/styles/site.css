@@ -1,0 +1,38 @@
+.left {
+  float: left;
+}
+
+.left h2 {
+  margin-top: 50px;
+}
+
+.right {
+  float: right;
+}
+
+.navigator {
+  margin-top: 50px;
+  margin-right: 24px;
+}
+
+.container {
+  width: 96%;
+  padding: 12px;
+  text-align: center;
+
+  /* display: flex;
+  height: calc(100vh - 148px);
+  justify-content: center;
+  align-items: center;*/
+}
+
+.child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-form {
+  width: 50%;
+  margin: 24p auto;
+}
