@@ -83,11 +83,15 @@ const Course = ({ match, history }) => {
             <button type="button" onClick={back}>
               BACK
             </button>
-            &nbsp;&nbsp;
-            <button type="button" onClick={save}>
-              SAVE
-            </button>
           </div>
+          &nbsp;&nbsp;
+          {course.name !== "" && course.points !== "" && (
+            <div className="right">
+              <button type="button" onClick={save}>
+                SAVE
+              </button>
+            </div>
+          )}
         </form>
       </div>
     </div>

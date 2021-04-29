@@ -20,6 +20,7 @@ const Students = () => {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Year of Birth</th>
+            <th>Adress</th>
             <td>
               <Link to="/students/0">Add new</Link>
             </td>
@@ -31,6 +32,7 @@ const Students = () => {
               <td>{c.firstName}</td>
               <td>{c.lastName}</td>
               <td>{c.yearOfBirth}</td>
+              <td>{c.adress}</td>
               <td>
                 <Link to={`/students/${c._id}`}>Edit</Link>
               </td>

@@ -8,11 +8,7 @@ const Student = ({ match, history }) => {
     firstName: "",
     lastName: "",
     yearOfBirth: 0,
-    formErrors: {
-      firstName: "",
-      lastName: "",
-      yearOfBirth: 0,
-    },
+    adress: "",
   });
 
   useEffect(() => {
@@ -89,6 +85,16 @@ const Student = ({ match, history }) => {
               placeholder="e.g. 1991"
             />
           </div>
+          <div style={{ margin: "12px 0" }}>
+            <label htmlFor="adress">Adress: </label>
+            <input
+              type="text"
+              name="adress"
+              value={student.adress}
+              onChange={changeHandler}
+              placeholder="Your adress"
+            />
+          </div>
           <hr />
           {id !== "0" && (
             <div className="left">
@@ -103,16 +109,13 @@ const Student = ({ match, history }) => {
             </button>
           </div>
           &nbsp;&nbsp;
-          {student.firstName !== "" &&
-            student.lastName !== "" &&
-            student.yearOfBirth.length === 4 &&
-            !isNaN(student.yearOfBirth) && (
-              <div className="right">
-                <button type="submit" onClick={save}>
-                  SAVE
-                </button>
-              </div>
-            )}
+          {student.firstName !== "" && student.lastName !== "" && (
+            <div className="right">
+              <button type="button" onClick={save}>
+                SAVE
+              </button>
+            </div>
+          )}
         </form>
       </div>
     </div>
